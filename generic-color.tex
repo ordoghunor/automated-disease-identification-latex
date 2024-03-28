@@ -179,9 +179,6 @@ Our rigorous preprocessing regimen, as outlined above, aims to bridge the gap be
 
 \subsection{Construction of the Multi-Output Model: A Deep Learning Approach}
 
-<<<<<<< HEAD
-
-=======
 The cornerstone of our proposed framework for automated dental disease identification lies in the meticulously designed multi-output model. This deep learning architecture represents the culmination of cutting-edge advancements and deliberate design choices, meticulously crafted to address the specific challenges inherent in dental X-ray analysis. Our primary objective is to achieve exceptional performance in disease identification, empowering dental professionals with a powerful tool to augment their diagnostic capabilities.
 
 To expedite the training process and capitalize on pre-existing knowledge, we strategically incorporate the principles of transfer learning \cite{goodfellow2016deep}. This approach involves utilizing a pre-trained convolutional neural network (CNN) as the foundation of our model. These pre-trained CNNs, honed on vast datasets of generic images, possess the capacity to capture low-level visual features that are transferable to the domain of dental X-ray analysis. By employing transfer learning, we effectively leverage the feature extraction capabilities of the pre-trained network while focusing our efforts on fine-tuning the architecture for the specific task of dental disease classification. This approach not only accelerates the training process but also injects valuable knowledge into the model, enabling it to grasp fundamental visual concepts that can be effectively adapted for dental X-ray analysis.
@@ -197,7 +194,6 @@ To introduce non-linearity into the network, activation functions are employed a
 The extracted features, meticulously culled by the convolutional layers and refined by pooling and dropout techniques, are subsequently fed into fully-connected layers \cite{bishop2006pattern}. These layers establish connections between all neurons in the preceding layer, enabling the model to integrate the extracted features and learn higher-order relationships. The final fully-connected layer culminates in a set of output neurons, each corresponding to a specific dental disease class or a healthy state. By employing a softmax activation function in the output layer, the model outputs a probability distribution across all potential classifications, enabling the identification of the most likely dental pathology present in the X-ray image. The fully-connected layers act as a classifier, taking the high-level features extracted by the convolutional layers and mapping them to the appropriate disease category.
 
 In summary, our multi-output model, characterized by its extended and refined architecture, holds promise for accurate and efficient dental disease identification. These architectural elements collectively contribute to the transformative potential of our framework in revolutionizing dental diagnostics.
->>>>>>> construction-multioutput-model
 
 \subsection{Feature extraction}
 
