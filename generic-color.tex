@@ -79,16 +79,20 @@ Tsukuba, Japan (e-mail: author@nrim.go.jp).}
 Early and accurate diagnosis underpins effective dental treatment. 
 Traditionally, dentists have meticulously employed visual examinations and 
 radiographic imaging (X-rays) to diagnose a variety of dental issues, 
-including caries (cavities), periodontal disease (gum disease), and malocclusions 
-(misaligned teeth). However, these methods possess inherent limitations. Time constraints during 
+including caries (cavities), periodontal disease (gum disease), 
+and malocclusions (misaligned teeth). 
+However, these methods possess inherent limitations. 
+Time constraints during 
 appointments can restrict thorough examinations, and the inherent subjectivity of human 
 interpretation can introduce variability in diagnoses.
 
-This paper presents a groundbreaking approach that leverages the transformative power of 
+This paper presents a groundbreaking approach that leverages the 
+transformative power of 
 artificial intelligence (AI) and image recognition to revolutionize dental 
 diagnostic capabilities. We propose a novel algorithm that 
 analyzes dental X-ray images with exceptional proficiency, discerning a broad 
-spectrum of dental conditions. This includes not only the identification of existing 
+spectrum of dental conditions. This includes not 
+only the identification of existing 
 cavities and gum disease, but also the ability to detect subtle 
 deviations in dental alignment that may necessitate future intervention.
 
@@ -108,109 +112,6 @@ a significant step forward in integrating AI into routine dental
 practice, signaling a paradigm shift toward more efficient, 
 accurate, and preventive dental care strategies that revolutionize 
 how oral health is diagnosed and managed.
-
-\subsection{Abbreviations and Acronyms}
-Define abbreviations and acronyms the first time they are used in the text, 
-even after they have already been defined in the abstract. Abbreviations 
-such as IEEE, SI, ac, and dc do not have to be defined. Abbreviations that 
-incorporate periods should not have spaces: write ``C.N.R.S.,'' not ``C. N. 
-R. S.'' Do not use abbreviations in the title unless they are unavoidable 
-(for example, ``IEEE'' in the title of this article).
-
-\subsection{Other Recommendations}
-Use one space after periods and colons. Hyphenate complex modifiers: 
-``zero-field-cooled magnetization.'' Avoid dangling participles, such as, 
-``Using \eqref{eq}, the potential was calculated.'' [It is not clear who or what 
-used \eqref{eq}.] Write instead, ``The potential was calculated by using \eqref{eq},'' or 
-``Using \eqref{eq}, we calculated the potential.''
-
-Use a zero before decimal points: ``0.25,'' not ``.25.'' Use 
-``cm$^{3}$,'' not ``cc.'' Indicate sample dimensions as ``0.1 cm 
-$\times $ 0.2 cm,'' not ``0.1 $\times $ 0.2 cm$^{2}$.'' The 
-abbreviation for ``seconds'' is ``s,'' not ``sec.'' Use 
-``Wb/m$^{2}$'' or ``webers per square meter,'' not 
-``webers/m$^{2}$.'' When expressing a range of values, write ``7 to 
-9'' or ``7--9,'' not ``7$\sim $9.''
-
-A parenthetical statement at the end of a sentence is punctuated outside of 
-the closing parenthesis (like this). (A parenthetical sentence is punctuated 
-within the parentheses.) In American English, periods and commas are within 
-quotation marks, like ``this period.'' Other punctuation is ``outside''! 
-Avoid contractions; for example, write ``do not'' instead of ``don't.'' The 
-serial comma is preferred: ``A, B, and C'' instead of ``A, B and C.''
-
-If you wish, you may write in the first person singular or plural and use 
-the active voice (``I observed that $\ldots$'' or ``We observed that $\ldots$'' 
-instead of ``It was observed that $\ldots$''). Remember to check spelling. If 
-your native language is not English, please get a native English-speaking 
-colleague to carefully proofread your paper.
-
-Try not to use too many typefaces in the same article. You're writing
-scholarly papers, not ransom notes. Also please remember that MathJax
-can't handle really weird typefaces.
-
-\subsection{Equations}
-Number equations consecutively with equation numbers in parentheses flush 
-with the right margin, as in \eqref{eq}. To make your equations more 
-compact, you may use the solidus (~/~), the exp function, or appropriate 
-exponents. Use parentheses to avoid ambiguities in denominators. Punctuate 
-equations when they are part of a sentence, as in
-\begin{equation}E=mc^2.\label{eq}\end{equation}
-
-Be sure that the symbols in your equation have been defined before the 
-equation appears or immediately following. Italicize symbols ($T$ might refer 
-to temperature, but T is the unit tesla). Refer to ``\eqref{eq},'' not ``Eq. \eqref{eq}'' 
-or ``equation \eqref{eq},'' except at the beginning of a sentence: ``Equation \eqref{eq} 
-is $\ldots$ .''
-
-\subsection{\LaTeX-Specific Advice}
-
-Please use ``soft'' (e.g., \verb|\eqref{Eq}|) cross references instead
-of ``hard'' references (e.g., \verb|(1)|). That will make it possible
-to combine sections, add equations, or change the order of figures or
-citations without having to go through the file line by line.
-
-Please don't use the \verb|{eqnarray}| equation environment. Use
-\verb|{align}| or \verb|{IEEEeqnarray}| instead. The \verb|{eqnarray}|
-environment leaves unsightly spaces around relation symbols.
-
-Please note that the \verb|{subequations}| environment in {\LaTeX}
-will increment the main equation counter even when there are no
-equation numbers displayed. If you forget that, you might write an
-article in which the equation numbers skip from (17) to (20), causing
-the copy editors to wonder if you've discovered a new method of
-counting.
-
-{\BibTeX} does not work by magic. It doesn't get the bibliographic
-data from thin air but from .bib files. If you use {\BibTeX} to produce a
-bibliography you must send the .bib files. 
-
-{\LaTeX} can't read your mind. If you assign the same label to a
-subsubsection and a table, you might find that Table I has been cross
-referenced as Table IV-B3. 
-
-{\LaTeX} does not have precognitive abilities. If you put a
-\verb|\label| command before the command that updates the counter it's
-supposed to be using, the label will pick up the last counter to be
-cross referenced instead. In particular, a \verb|\label| command
-should not go before the caption of a figure or a table.
-
-Do not use \verb|\nonumber| inside the \verb|{array}| environment. It
-will not stop equation numbers inside \verb|{array}| (there won't be
-any anyway) and it might stop a wanted equation number in the
-surrounding equation.
-
-If you are submitting your paper to a colorized journal, you can use
-the following two lines at the start of the article to ensure its
-appearance resembles the final copy:
-
-\smallskip\noindent
-\begin{small}
-\begin{tabular}{l}
-\verb+\+\texttt{documentclass[journal,twoside,web]\{ieeecolor\}}\\
-\verb+\+\texttt{usepackage\{\textit{Journal\_Name}\}}
-\end{tabular}
-\end{small}
 
 \section{Units}
 Use either SI (MKS) or CGS as primary units. (SI units are strongly 
