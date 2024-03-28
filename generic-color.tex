@@ -115,38 +115,30 @@ how oral health is diagnosed and managed.
 
 \input{related-work}
 
-\section{Units}
-Use either SI (MKS) or CGS as primary units. (SI units are strongly 
-encouraged.) English units may be used as secondary units (in parentheses). 
-This applies to papers in data storage. For example, write ``15 
-Gb/cm$^{2}$ (100 Gb/in$^{2})$.'' An exception is when 
-English units are used as identifiers in trade, such as ``3\textonehalf-in 
-disk drive.'' Avoid combining SI and CGS units, such as current in amperes 
-and magnetic field in oersteds. This often leads to confusion because 
-equations do not balance dimensionally. If you must use mixed units, clearly 
-state the units for each quantity in an equation.
-
-The SI unit for magnetic field strength $H$ is A/m. However, if you wish to use 
-units of T, either refer to magnetic flux density $B$ or magnetic field 
-strength symbolized as $\mu _{0}H$. Use the center dot to separate 
-compound units, e.g., ``A$\cdot $m$^{2}$.''
-
 \section{Materials and Methods}
-The word ``data'' is plural, not singular. The subscript for the 
-permeability of vacuum $\mu _{0}$ is zero, not a lowercase letter 
-``o.'' The term for residual magnetization is ``remanence''; the adjective 
-is ``remanent''; do not write ``remnance'' or ``remnant.'' Use the word 
-``micrometer'' instead of ``micron.'' A graph within a graph is an 
-``inset,'' not an ``insert.'' The word ``alternatively'' is preferred to the 
-word ``alternately'' (unless you really mean something that alternates). Use 
-the word ``whereas'' instead of ``while'' (unless you are referring to 
-simultaneous events). Do not use the word ``essentially'' to mean 
-``approximately'' or ``effectively.'' Do not use the word ``issue'' as a 
-euphemism for ``problem.'' When compositions are not specified, separate 
-chemical symbols by en-dashes; for example, ``NiMn'' indicates the 
-intermetallic compound Ni$_{0.5}$Mn$_{0.5}$ whereas 
-``Ni--Mn'' indicates an alloy of some composition 
-Ni$_{x}$Mn$_{1-x}$.
+
+\subsection{Datasets}
+
+The success of our proposed methodology relies heavily on the quality and diversity of the datasets used for training and evaluation. We collected a comprehensive dataset of dental X-ray images from various sources, including dental clinics and research institutions. The dataset encompasses a wide range of dental conditions, including caries, periodontal disease, and malocclusions, to ensure the algorithm's robustness and versatility in identifying different dental issues.
+
+
+
+
+\subsection{Proposed Methodology}
+
+Our proposed methodology combines state-of-the-art image recognition techniques with deep learning algorithms to develop an automated dental disease identification framework. The algorithm undergoes a rigorous training process using the collected dataset to learn patterns and features indicative of various dental conditions. Through iterative optimization and fine-tuning, the algorithm achieves high accuracy and reliability in identifying and classifying dental abnormalities in X-ray images.
+
+
+\subsection{Data Augmentation}
+
+To further enhance the generalization and robustness of the algorithm, we employed data augmentation techniques during the training phase. Augmentation methods such as rotation, scaling, and flipping were applied to generate additional training samples, thereby enriching the dataset and improving the algorithm's ability to handle variations in X-ray images caused by differences in patient positioning and imaging conditions.
+
+
+\subsection{Preprocessing of the Image Dataset}
+
+\subsection{Construction of the Multioutput Model}
+
+\subsection{Proposed Model}
 
 \begin{figure}[!t]
 \centerline{\includegraphics[width=\columnwidth]{fig1.png}}
@@ -154,21 +146,6 @@ Ni$_{x}$Mn$_{1-x}$.
 It is good practice to explain the significance of the figure in the caption.}
 \label{fig1}
 \end{figure}
-
-Be aware of the different meanings of the homophones ``affect'' (usually a 
-verb) and ``effect'' (usually a noun), ``complement'' and ``compliment,'' 
-``discreet'' and ``discrete,'' ``principal'' (e.g., ``principal 
-investigator'') and ``principle'' (e.g., ``principle of measurement''). Do 
-not confuse ``imply'' and ``infer.'' 
-
-Prefixes such as ``non,'' ``sub,'' ``micro,'' ``multi,'' and ``ultra'' are 
-not independent words; they should be joined to the words they modify, 
-usually without a hyphen. There is no period after the ``et'' in the Latin 
-abbreviation ``\emph{et al.}'' (it is also italicized). The abbreviation ``i.e.,'' means 
-``that is,'' and the abbreviation ``e.g.,'' means ``for example'' (these 
-abbreviations are not italicized).
-
-A general IEEE styleguide is available at \underline{http://www.ieee.org/authortools}.
 
 \section{Guidelines for Graphics Preparation and Submission}
 \label{sec:guidelines}
