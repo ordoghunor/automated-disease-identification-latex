@@ -115,38 +115,38 @@ how oral health is diagnosed and managed.
 
 \input{related-work}
 
-\section{Units}
-Use either SI (MKS) or CGS as primary units. (SI units are strongly 
-encouraged.) English units may be used as secondary units (in parentheses). 
-This applies to papers in data storage. For example, write ``15 
-Gb/cm$^{2}$ (100 Gb/in$^{2})$.'' An exception is when 
-English units are used as identifiers in trade, such as ``3\textonehalf-in 
-disk drive.'' Avoid combining SI and CGS units, such as current in amperes 
-and magnetic field in oersteds. This often leads to confusion because 
-equations do not balance dimensionally. If you must use mixed units, clearly 
-state the units for each quantity in an equation.
+\section{Materials and Methods}
 
-The SI unit for magnetic field strength $H$ is A/m. However, if you wish to use 
-units of T, either refer to magnetic flux density $B$ or magnetic field 
-strength symbolized as $\mu _{0}H$. Use the center dot to separate 
-compound units, e.g., ``A$\cdot $m$^{2}$.''
+\subsection{Datasets}
 
-\section{Some Common Mistakes}
-The word ``data'' is plural, not singular. The subscript for the 
-permeability of vacuum $\mu _{0}$ is zero, not a lowercase letter 
-``o.'' The term for residual magnetization is ``remanence''; the adjective 
-is ``remanent''; do not write ``remnance'' or ``remnant.'' Use the word 
-``micrometer'' instead of ``micron.'' A graph within a graph is an 
-``inset,'' not an ``insert.'' The word ``alternatively'' is preferred to the 
-word ``alternately'' (unless you really mean something that alternates). Use 
-the word ``whereas'' instead of ``while'' (unless you are referring to 
-simultaneous events). Do not use the word ``essentially'' to mean 
-``approximately'' or ``effectively.'' Do not use the word ``issue'' as a 
-euphemism for ``problem.'' When compositions are not specified, separate 
-chemical symbols by en-dashes; for example, ``NiMn'' indicates the 
-intermetallic compound Ni$_{0.5}$Mn$_{0.5}$ whereas 
-``Ni--Mn'' indicates an alloy of some composition 
-Ni$_{x}$Mn$_{1-x}$.
+The success of our proposed methodology relies heavily on the quality and diversity of the datasets used for training and evaluation. We collected a comprehensive dataset of dental X-ray images from various sources, including dental clinics and research institutions. The dataset encompasses a wide range of dental conditions, including caries, periodontal disease, and malocclusions, to ensure the algorithm's robustness and versatility in identifying different dental issues.
+
+
+
+\subsection{Proposed Methodology}
+
+Our research introduces a groundbreaking framework that is poised to redefine automated dental disease detection through the application of cutting-edge deep learning techniques. At the heart of our innovation is a meticulously crafted deep learning architecture, purpose-built for the complex analysis of dental radiographs. This architectural marvel serves as the backbone of our framework, orchestrating the extraction of invaluable insights from raw imaging data with unprecedented precision.
+
+Central to our approach is the use of Convolutional Neural Networks (CNNs), renowned for their ability to extract intricate features from complex visual data. Harnessing the power of CNNs, our framework navigates the intricate landscape of dental X-rays and unravels subtle disease signatures hidden within them. We also integrate attention mechanisms into our architecture, mirroring the selective focus of the human visual system. This strategic incorporation enables our framework to prioritise regions of paramount diagnostic significance, ensuring a targeted and efficient analysis process.
+
+The journey from raw image data to actionable insights is facilitated by a multi-step process. Following feature extraction, the extracted features are carefully scrutinised by a multi-class classification module. This module acts as the final arbiter, deciphering the nuanced patterns embedded in the feature space to identify specific dental pathologies or determine a state of oral health.
+
+
+However, the path to achieving such diagnostic prowess is paved with rigorous training and optimisation. Our framework undergoes a comprehensive training programme, carefully curated to refine its diagnostic acumen and enhance its ability to generalise across different patient populations. This process involves careful partitioning of the dataset to ensure that our framework is exposed to a wide range of dental pathologies during the training phase. In addition, advanced optimisation techniques are used to fine-tune the internal parameters of our architecture, facilitating rapid convergence towards peak performance.
+
+The impact of our work extends far beyond the realm of conventional dental diagnostics. By augmenting professional skills with state-of-the-art deep learning technology, our framework has the potential to revolutionise the practice of dentistry. From improving diagnostic accuracy to fostering a culture of preventative care, our data-driven approach is ushering in a new era of dental care where early intervention and personalised treatment are the cornerstones of patient wellbeing.
+
+
+\subsection{Data Augmentation}
+
+To further enhance the generalization and robustness of the algorithm, we employed data augmentation techniques during the training phase. Augmentation methods such as rotation, scaling, and flipping were applied to generate additional training samples, thereby enriching the dataset and improving the algorithm's ability to handle variations in X-ray images caused by differences in patient positioning and imaging conditions.
+
+
+\subsection{Preprocessing of the Image Dataset}
+
+\subsection{Construction of the Multioutput Model}
+
+\subsection{Proposed Model}
 
 \begin{figure}[!t]
 \centerline{\includegraphics[width=\columnwidth]{fig1.png}}
@@ -154,21 +154,6 @@ Ni$_{x}$Mn$_{1-x}$.
 It is good practice to explain the significance of the figure in the caption.}
 \label{fig1}
 \end{figure}
-
-Be aware of the different meanings of the homophones ``affect'' (usually a 
-verb) and ``effect'' (usually a noun), ``complement'' and ``compliment,'' 
-``discreet'' and ``discrete,'' ``principal'' (e.g., ``principal 
-investigator'') and ``principle'' (e.g., ``principle of measurement''). Do 
-not confuse ``imply'' and ``infer.'' 
-
-Prefixes such as ``non,'' ``sub,'' ``micro,'' ``multi,'' and ``ultra'' are 
-not independent words; they should be joined to the words they modify, 
-usually without a hyphen. There is no period after the ``et'' in the Latin 
-abbreviation ``\emph{et al.}'' (it is also italicized). The abbreviation ``i.e.,'' means 
-``that is,'' and the abbreviation ``e.g.,'' means ``for example'' (these 
-abbreviations are not italicized).
-
-A general IEEE styleguide is available at \underline{http://www.ieee.org/authortools}.
 
 \section{Guidelines for Graphics Preparation and Submission}
 \label{sec:guidelines}
