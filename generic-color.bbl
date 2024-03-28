@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{endres2020development}
 Michael~G Endres, Florian Hillen, Marios Salloumis, Ahmad~R Sedaghat, Stefan~M
@@ -40,5 +40,39 @@ Andi Maulidinnawati Abdul~Kadir Parewe, Wayan~Firdaus Mahmudy, Fatwa Ramdhani,
   strategies.
 \newblock {\em Journal of Telecommunication, Electronic and Computer
   Engineering (JTEC)}, 10(1-8):27--33, 2018.
+
+\bibitem{goodfellow2016deep}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock Deep learning.
+\newblock 2016.
+
+\bibitem{zeiler2011adaptive}
+Matthew~D Zeiler and Rob Fergus.
+\newblock Adaptive deconvolutional networks for object classification and
+  detection.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 2808--2815. IEEE, 2011.
+
+\bibitem{simonyan2014very}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock In {\em arXiv preprint arXiv:1409.1556}, 2014.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava and Geoffrey~E Hinton.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock In {\em Journal of machine learning research}, volume~15, pages
+  1929--1958, 2014.
+
+\bibitem{nair2010rectified}
+Vinod Nair and Geoffrey~E Hinton.
+\newblock Rectified linear units improve neural network acoustic models.
+\newblock In {\em Proceedings of the 30th international conference on machine
+  learning}, pages 807--814. ACM, 2010.
+
+\bibitem{bishop2006pattern}
+Christopher~M Bishop.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006.
 
 \end{thebibliography}
