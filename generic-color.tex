@@ -160,7 +160,28 @@ In the field of dental diagnostics, specialized encoding methodologies are requi
 Our rigorous preprocessing regimen, as outlined above, aims to bridge the gap between raw image data and the sophisticated analytics of our deep learning model. By normalising pixel intensities, standardising image dimensions, and encoding categorical data, we pave the way for precise feature extraction and robust disease classification. This meticulous preprocessing serves as the cornerstone of our methodology, propelling us closer to our overarching goal of revolutionising automated dental disease identification.
 
 
-\subsection{Construction of the Multioutput Model}
+\subsection{Construction of the Multi-Output Model: A Deep Learning Approach}
+
+Our proposed framework is based on a multi-output model, which is a deep learning architecture designed for automated dental disease identification. In this section, we explain the architectural choices and functional components that contribute to the model's exceptional performance.
+
+We leverage transfer learning for efficiency and feature extraction.
+
+To facilitate training and utilize existing knowledge, we incorporate transfer learning strategically. Our model is based on a pre-trained convolutional neural network (CNN) that provides a strong feature extraction mechanism. This pre-trained network has been fine-tuned on a large generic image dataset and can capture transferable low-level visual features for dental X-ray analysis. By using transfer learning, we can effectively utilize the feature extraction capabilities of the pre-trained network while fine-tuning the architecture for dental disease classification. This approach accelerates training and injects valuable knowledge into the model, facilitating the understanding of fundamental visual concepts that can be adapted for dental X-ray analysis.
+
+The article explores the intricacies of convolutional layers and feature hierarchies.
+
+The multi-output model's core is based on carefully designed convolutional layers. These layers are highly effective at extracting hierarchical features from dental X-ray images. By using convolutional operations with learnable filters, increasingly complex features are captured, starting from low-level edge and texture details and transitioning to higher-level abstractions that hold diagnostic significance. By stacking convolutional layers, the model can progressively identify intricate patterns within X-ray imagery, facilitating the identification of disease signatures. Convolution filters act as feature detectors, scanning the image and responding to specific patterns. As the network progresses through deeper convolutional layers, these filters become increasingly complex, discerning more nuanced and disease-specific features within X-ray data.
+
+Strategically placed max-pooling layers play a crucial role in reducing data dimensionality while preserving salient features. This process enhances computational efficiency by reducing parameters for model learning and fosters robustness against overfitting. Max-pooling introduces invariance to small spatial transformations within the image, making the model less susceptible to overfitting and enhancing generalizability to unseen dental X-rays.
+
+Dropout layers prevent model reliance on specific features and promote generalization by randomly deactivating a subset of neurons in each iteration. This technique helps to reduce the risk of co-adaptation, where neuron groups become too dependent on each other, resulting in a more robust and generalizable model.
+
+Activation functions, such as ReLU or Leaky ReLU, are applied after each convolutional and fully-connected layer to introduce non-linearity into the network. This enables the learning of complex relationships between input features and desired outputs. Non-linearity enables the model to learn more expressive representations and map intricate relationships between features and disease classifications.
+
+The extracted features, refined by convolutional, pooling, and dropout layers, are then fed into fully-connected layers for multi-class classification, translating features into actionable insights. These layers establish connections between all neurons in the preceding layer, integrating features and learning higher-order relationships. The final fully-connected layer produces output neurons corresponding to specific disease classes or a healthy state. By using softmax activation, the model outputs a probability distribution across potential classifications, enabling identification of the most likely dental pathology present in the X-ray image. Fully-connected layers serve as classifiers, mapping high-level features to the corresponding disease categories. The use of softmax activation ensures accurate classification by providing probabilistic outputs.
+
+Our multi-output model has an extended and refined architecture, which enables accurate and efficient identification of dental diseases. This paves the way for transformative advancements in dental diagnostics.
+
 
 \subsection{Feature extraction}
 
