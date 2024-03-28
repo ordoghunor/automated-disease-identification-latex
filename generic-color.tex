@@ -149,9 +149,18 @@ To further enhance the generalization and robustness of the algorithm, we employ
 
 \subsection{Preprocessing of the Image Dataset}
 
+To establish a strong foundation for our proposed methodology, we must first meticulously preprocess the image dataset. This preparatory phase is vital to ensure that the raw dental X-ray images are optimally prepared for use within our deep learning framework, paving the way for significant advancements in automated dental disease identification.
+
+Our preprocessing efforts primarily involve normalization and resizing. Standardization of pixel intensity values is necessary across dental X-ray images due to their inherent variability. This is achieved by normalizing the values within a defined range of 0 to 1. The normalization process establishes a uniform baseline for pixel intensities, which facilitates streamlined processing by our deep learning model. Resizing techniques are used to ensure consistent image dimensions throughout the dataset. This promotes uniformity in data presentation and ensures equitable treatment and analysis by our model, regardless of the original dimensions of the images.
+
+In the field of dental diagnostics, specialized encoding methodologies are required to handle categorical data, such as disease labels ranging from caries to periodontal disease. To reduce the gap between textual labels and numerical representations, we use techniques such as label encoding and one-hot encoding. Label encoding assigns a unique integer to each distinct textual label, while one-hot encoding generates binary vectors with designated positions indicating specific labels. These encoding strategies allow our model to accurately interpret and process categorical data, which is crucial for precise disease classification in subsequent stages of our methodology.
+
+Our rigorous preprocessing regimen, as outlined above, aims to bridge the gap between raw image data and the sophisticated analytics of our deep learning model. By normalising pixel intensities, standardising image dimensions, and encoding categorical data, we pave the way for precise feature extraction and robust disease classification. This meticulous preprocessing serves as the cornerstone of our methodology, propelling us closer to our overarching goal of revolutionising automated dental disease identification.
+
+
 \subsection{Construction of the Multioutput Model}
 
-\subsection{Proposed Model}
+\subsection{Feature extraction}
 
 % \begin{figure}[!t]
 % \centerline{\includegraphics[width=\columnwidth]{fig1.png}}
