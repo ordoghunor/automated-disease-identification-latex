@@ -12,24 +12,16 @@
 {Author \MakeLowercase{\textit{et al.}}: Automated Dental Disease Identification: Image Recognition-Based Approach for Advancing Dental Diagnostic Capabilities (March 2024)}
 \begin{document}
 \title{Automated Dental Disease Identification: Image Recognition-Based Approach for Advancing Dental Diagnostic Capabilities (March 2024)}
-\author{Biró Botond, Pap N. Raymond, Hunor Ördög
-\thanks{This paragraph of the first footnote will contain the date on 
-which you submitted your paper for review. It will also contain support 
-information, including sponsor and financial support acknowledgment. For 
-example, ``This work was supported in part by the U.S. Department of 
-Commerce under Grant BS123456.'' }
-\thanks{The next few paragraphs should contain 
-the authors' current affiliations, including current address and e-mail. For 
-example, F. A. Author is with the National Institute of Standards and 
-Technology, Boulder, CO 80305 USA (e-mail: author@boulder.nist.gov). }
-\thanks{S. B. Author, Jr., was with Rice University, Houston, TX 77005 USA. He is 
-now with the Department of Physics, Colorado State University, Fort Collins, 
-CO 80523 USA (e-mail: author@lamar.colostate.edu).}
-\thanks{T. C. Author is with 
-the Electrical Engineering Department, University of Colorado, Boulder, CO 
-80309 USA, on leave from the National Research Institute for Metals, 
-Tsukuba, Japan (e-mail: author@nrim.go.jp).}
+
+\author{Botond Biró, Hunor Ördög, Norbert R. Pap
+    \thanks{This work was supported in part by the Babes-Bolyai University of Cluj-Napoca, Romania, which provided financial support for our research.}
+    \thanks{B. Biró is affiliated with the Department of Mathematics, Babes-Bolyai University of Cluj-Napoca, sRomania (e-mail: bbiro@math.bbu.ro).}
+    \thanks{H. Ördög is affiliated with the Department of Computer Science, Babes-Bolyai University of Cluj-Napoca, Romania (e-mail: hunor.ordog@ubbcluj.ro).}
+    \thanks{N. R. Pap is affiliated with the Department of Physics, Babes-Bolyai University of Cluj-Napoca, Romania (e-mail: norbert.pap@ubbcluj.ro).}
+    \thanks{Additionally, the authors would like to acknowledge the support from the Mathias Corvinus University of Budapest, Hungary, for their contributions to this research.}
+    \thanks{Further, H. Ördög and N. R. Pap are grateful for the fruitful discussions and resources provided by the Department of Mathematics and Computer Science, Mathias Corvinus University of Budapest, Hungary.}
 }
+
 
 \maketitle
 
@@ -37,81 +29,81 @@ Tsukuba, Japan (e-mail: author@nrim.go.jp).}
     In recent years, the convergence of artificial intelligence (AI)
     and image recognition technologies has catalyzed transformative
     advancements across various sectors, including healthcare.
-    This paper introduces a pioneering methodology aimed at 
-    augmenting dental diagnostic capabilities through the integration of 
-    automated disease identification techniques based on image recognition 
-    algorithms. Leveraging cutting-edge deep learning architectures and 
-    a meticulously curated dataset of dental imagery, our proposed 
-    framework demonstrates exceptional proficiency in discerning a diverse 
-    spectrum of dental conditions, encompassing caries, periodontal diseases, 
-    and deviations in dental alignment. The proposed methodology orchestrates 
-    a meticulously orchestrated pipeline, encompassing image preprocessing, 
-    feature extraction, and classification stages, culminating in swift and 
-    precise diagnosis. Rigorous empirical assessments conducted across a 
-    comprehensive gamut of dental images underscore the robustness and 
-    efficacy of our approach, achieving an average diagnostic accuracy 
-    surpassing 95\% across diverse dental pathologies. Furthermore, 
-    comprehensive validation exercises against expert human 
-    evaluations corroborate the system's diagnostic fidelity, whilst 
-    markedly curtailing diagnostic turnaround times. The prospective 
-    ramifications of our automated dental disease identification 
-    framework are far-reaching, promising to catalyze advancements in 
-    patient care outcomes, optimize clinical workflows, and enhance dental 
-    care accessibility, particularly within marginalized communities. This 
-    research constitutes a seminal stride towards the seamless integration 
-    of AI-driven technologies into routine dental practice, heralding a 
-    paradigm shift towards more efficient and effective diagnosis and treatment 
+    This paper introduces a pioneering methodology aimed at
+    augmenting dental diagnostic capabilities through the integration of
+    automated disease identification techniques based on image recognition
+    algorithms. Leveraging cutting-edge deep learning architectures and
+    a meticulously curated dataset of dental imagery, our proposed
+    framework demonstrates exceptional proficiency in discerning a diverse
+    spectrum of dental conditions, encompassing caries, periodontal diseases,
+    and deviations in dental alignment. The proposed methodology orchestrates
+    a meticulously orchestrated pipeline, encompassing image preprocessing,
+    feature extraction, and classification stages, culminating in swift and
+    precise diagnosis. Rigorous empirical assessments conducted across a
+    comprehensive gamut of dental images underscore the robustness and
+    efficacy of our approach, achieving an average diagnostic accuracy
+    surpassing 95\% across diverse dental pathologies. Furthermore,
+    comprehensive validation exercises against expert human
+    evaluations corroborate the system's diagnostic fidelity, whilst
+    markedly curtailing diagnostic turnaround times. The prospective
+    ramifications of our automated dental disease identification
+    framework are far-reaching, promising to catalyze advancements in
+    patient care outcomes, optimize clinical workflows, and enhance dental
+    care accessibility, particularly within marginalized communities. This
+    research constitutes a seminal stride towards the seamless integration
+    of AI-driven technologies into routine dental practice, heralding a
+    paradigm shift towards more efficient and effective diagnosis and treatment
     planning paradigms.
 \end{abstract}
-    
+
 
 \begin{IEEEkeywords}
-    Artificial Intelligence, Image Recognition, Dental Diagnosis, 
-    Deep Learning, Automated Disease Identification, 
-    Dental Pathologies, Caries Detection, 
-    Periodontal Diseases, Dental Imaging, Diagnostic Accuracy, 
-    Clinical Workflow Optimization, Healthcare Technology, 
-    Patient Care Outcomes, Treatment Planning, Accessibility, 
+    Artificial Intelligence, Image Recognition, Dental Diagnosis,
+    Deep Learning, Automated Disease Identification,
+    Dental Pathologies, Caries Detection,
+    Periodontal Diseases, Dental Imaging, Diagnostic Accuracy,
+    Clinical Workflow Optimization, Healthcare Technology,
+    Patient Care Outcomes, Treatment Planning, Accessibility,
     Marginalized Communities.
 \end{IEEEkeywords}
 
 \section{Introduction}
 \label{sec:introduction}
-Early and accurate diagnosis underpins effective dental treatment. 
-Traditionally, dentists have meticulously employed visual examinations and 
-radiographic imaging (X-rays) to diagnose a variety of dental issues, 
-including caries (cavities), periodontal disease (gum disease), 
-and malocclusions (misaligned teeth). 
-However, these methods possess inherent limitations. 
-Time constraints during 
-appointments can restrict thorough examinations, and the inherent subjectivity of human 
+Early and accurate diagnosis underpins effective dental treatment.
+Traditionally, dentists have meticulously employed visual examinations and
+radiographic imaging (X-rays) to diagnose a variety of dental issues,
+including caries (cavities), periodontal disease (gum disease),
+and malocclusions (misaligned teeth).
+However, these methods possess inherent limitations.
+Time constraints during
+appointments can restrict thorough examinations, and the inherent subjectivity of human
 interpretation can introduce variability in diagnoses.
 
-This paper presents a groundbreaking approach that leverages the 
-transformative power of 
-artificial intelligence (AI) and image recognition to revolutionize dental 
-diagnostic capabilities. We propose a novel algorithm that 
-analyzes dental X-ray images with exceptional proficiency, discerning a broad 
-spectrum of dental conditions. This includes not 
-only the identification of existing 
-cavities and gum disease, but also the ability to detect subtle 
+This paper presents a groundbreaking approach that leverages the
+transformative power of
+artificial intelligence (AI) and image recognition to revolutionize dental
+diagnostic capabilities. We propose a novel algorithm that
+analyzes dental X-ray images with exceptional proficiency, discerning a broad
+spectrum of dental conditions. This includes not
+only the identification of existing
+cavities and gum disease, but also the ability to detect subtle
 deviations in dental alignment that may necessitate future intervention.
 
-The automated dental disease identification framework has far-reaching 
-implications beyond enhancing diagnostic accuracy. Leveraging AI's 
-capability to analyze extensive data objectively and consistently, 
+The automated dental disease identification framework has far-reaching
+implications beyond enhancing diagnostic accuracy. Leveraging AI's
+capability to analyze extensive data objectively and consistently,
 this technology can improve diagnostic accuracy and consistency by
 offering valuable second opinions on X-rays, potentially reducing
 missed diagnoses and ensuring uniform interpretations across various
 dental professionals. Additionally, it empowers predictive dental
 care by detecting subtle anomalies in X-rays, enabling early intervention
-to address potential issues before they worsen. Furthermore, AI-based 
-diagnostics have the potential to enhance accessibility to dental care, 
-particularly in remote areas or for initial screenings, thus improving 
-oral health outcomes for underserved populations. This research marks 
-a significant step forward in integrating AI into routine dental 
-practice, signaling a paradigm shift toward more efficient, 
-accurate, and preventive dental care strategies that revolutionize 
+to address potential issues before they worsen. Furthermore, AI-based
+diagnostics have the potential to enhance accessibility to dental care,
+particularly in remote areas or for initial screenings, thus improving
+oral health outcomes for underserved populations. This research marks
+a significant step forward in integrating AI into routine dental
+practice, signaling a paradigm shift toward more efficient,
+accurate, and preventive dental care strategies that revolutionize
 how oral health is diagnosed and managed.
 
 \input{related-work}
@@ -131,12 +123,12 @@ Our dataset stands out due to its comprehensive coverage of various dental patho
 
 
 \begin{figure*}[!t]
-\hspace{-1cm}
-% \centering
-\includegraphics[width=\textwidth]{ss-teeth-full.png}
-\captionsetup{justification=centering, singlelinecheck=off} 
-\caption{Radiographs depicting various dental conditions.}
-\label{radiographs1}
+    \hspace{-1cm}
+    % \centering
+    \includegraphics[width=\textwidth]{ss-teeth-full.png}
+    \captionsetup{justification=centering, singlelinecheck=off}
+    \caption{Radiographs depicting various dental conditions.}
+    \label{radiographs1}
 \end{figure*}
 
 
@@ -155,9 +147,9 @@ The impact of our work extends far beyond the realm of conventional dental diagn
 Figure \ref{flowchart} illustrates the flowchart of the proposed work.
 
 \begin{figure}[!t]
-\centerline{\includegraphics[width=\columnwidth]{flowchart.png}}
-\caption{Flowchart of the proposed work.}
-\label{flowchart}
+    \centerline{\includegraphics[width=\columnwidth]{flowchart.png}}
+    \caption{Flowchart of the proposed work.}
+    \label{flowchart}
 \end{figure}
 
 \subsection{Data Augmentation}
@@ -203,12 +195,7 @@ In summary, our multi-output model, characterized by its extended and refined ar
 
 \subsection{Feature extraction}
 
-% \begin{figure}[!t]
-% \centerline{\includegraphics[width=\columnwidth]{fig1.png}}
-% \caption{Magnetization as a function of applied field.
-% It is good practice to explain the significance of the figure in the caption.}
-% \label{fig1}
-% \end{figure}
+
 
 
 \section{Conclusion}
@@ -222,20 +209,20 @@ This work represents a significant leap forward in the integration of AI into ro
 
 \section*{Acknowledgment}
 
-The preferred spelling of the word ``acknowledgment'' in American English is 
-without an ``e'' after the ``g.'' Use the singular heading even if you have 
-many acknowledgments. Avoid expressions such as ``One of us (S.B.A.) would 
-like to thank $\ldots$ .'' Instead, write ``F. A. Author thanks $\ldots$ .'' In most 
-cases, sponsor and financial support acknowledgments are placed in the 
+The preferred spelling of the word ``acknowledgment'' in American English is
+without an ``e'' after the ``g.'' Use the singular heading even if you have
+many acknowledgments. Avoid expressions such as ``One of us (S.B.A.) would
+like to thank $\ldots$ .'' Instead, write ``F. A. Author thanks $\ldots$ .'' In most
+cases, sponsor and financial support acknowledgments are placed in the
 unnumbered footnote on the first page, not here.
 
 
 \section*{Footnotes}
-Number footnotes separately in superscript numbers.\footnote{It is recommended that footnotes be avoided (except for 
-the unnumbered footnote with the receipt date on the first page). Instead, 
-try to integrate the footnote information into the text.} Place the actual 
-footnote at the bottom of the column in which it is cited; do not put 
-footnotes in the reference list (endnotes). Use letters for table footnotes 
+Number footnotes separately in superscript numbers.\footnote{It is recommended that footnotes be avoided (except for
+    the unnumbered footnote with the receipt date on the first page). Instead,
+    try to integrate the footnote information into the text.} Place the actual
+footnote at the bottom of the column in which it is cited; do not put
+footnotes in the reference list (endnotes). Use letters for table footnotes
 (see Table \ref{table}).
 
 % \appendices
@@ -246,69 +233,69 @@ footnotes in the reference list (endnotes). Use letters for table footnotes
 \bibliography{references}
 
 
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a1.png}}]{First A. Author} (M'76--SM'81--F'87) and all authors may include 
-biographies. Biographies are often not included in conference-related
-papers. This author became a Member (M) of IEEE in 1976, a Senior
-Member (SM) in 1981, and a Fellow (F) in 1987. The first paragraph may
-contain a place and/or date of birth (list place, then date). Next,
-the author's educational background is listed. The degrees should be
-listed with type of degree in what field, which institution, city,
-state, and country, and year the degree was earned. The author's major
-field of study should be lower-cased. 
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a1.png}}]{First A. Author} (M'76--SM'81--F'87) and all authors may include
+    biographies. Biographies are often not included in conference-related
+    papers. This author became a Member (M) of IEEE in 1976, a Senior
+    Member (SM) in 1981, and a Fellow (F) in 1987. The first paragraph may
+    contain a place and/or date of birth (list place, then date). Next,
+    the author's educational background is listed. The degrees should be
+    listed with type of degree in what field, which institution, city,
+    state, and country, and year the degree was earned. The author's major
+    field of study should be lower-cased.
 
-The second paragraph uses the pronoun of the person (he or she) and not the 
-author's last name. It lists military and work experience, including summer 
-and fellowship jobs. Job titles are capitalized. The current job must have a 
-location; previous positions may be listed 
-without one. Information concerning previous publications may be included. 
-Try not to list more than three books or published articles. The format for 
-listing publishers of a book within the biography is: title of book 
-(publisher name, year) similar to a reference. Current and previous research 
-interests end the paragraph. The third paragraph begins with the author's 
-title and last name (e.g., Dr.\ Smith, Prof.\ Jones, Mr.\ Kajor, Ms.\ Hunter). 
-List any memberships in professional societies other than the IEEE. Finally, 
-list any awards and work for IEEE committees and publications. If a 
-photograph is provided, it should be of good quality, and 
-professional-looking. Following are two examples of an author's biography.
+    The second paragraph uses the pronoun of the person (he or she) and not the
+    author's last name. It lists military and work experience, including summer
+    and fellowship jobs. Job titles are capitalized. The current job must have a
+    location; previous positions may be listed
+    without one. Information concerning previous publications may be included.
+    Try not to list more than three books or published articles. The format for
+    listing publishers of a book within the biography is: title of book
+    (publisher name, year) similar to a reference. Current and previous research
+    interests end the paragraph. The third paragraph begins with the author's
+    title and last name (e.g., Dr.\ Smith, Prof.\ Jones, Mr.\ Kajor, Ms.\ Hunter).
+    List any memberships in professional societies other than the IEEE. Finally,
+    list any awards and work for IEEE committees and publications. If a
+    photograph is provided, it should be of good quality, and
+    professional-looking. Following are two examples of an author's biography.
 \end{IEEEbiography}
 
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a2.png}}]{Second B. Author} was born in Greenwich Village, New York, NY, USA in 
-1977. He received the B.S. and M.S. degrees in aerospace engineering from 
-the University of Virginia, Charlottesville, in 2001 and the Ph.D. degree in 
-mechanical engineering from Drexel University, Philadelphia, PA, in 2008.
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a2.png}}]{Second B. Author} was born in Greenwich Village, New York, NY, USA in
+    1977. He received the B.S. and M.S. degrees in aerospace engineering from
+    the University of Virginia, Charlottesville, in 2001 and the Ph.D. degree in
+    mechanical engineering from Drexel University, Philadelphia, PA, in 2008.
 
-From 2001 to 2004, he was a Research Assistant with the Princeton Plasma 
-Physics Laboratory. Since 2009, he has been an Assistant Professor with the 
-Mechanical Engineering Department, Texas A{\&}M University, College Station. 
-He is the author of three books, more than 150 articles, and more than 70 
-inventions. His research interests include high-pressure and high-density 
-nonthermal plasma discharge processes and applications, microscale plasma 
-discharges, discharges in liquids, spectroscopic diagnostics, plasma 
-propulsion, and innovation plasma applications. He is an Associate Editor of 
-the journal \emph{Earth, Moon, Planets}, and holds two patents. 
+    From 2001 to 2004, he was a Research Assistant with the Princeton Plasma
+    Physics Laboratory. Since 2009, he has been an Assistant Professor with the
+    Mechanical Engineering Department, Texas A{\&}M University, College Station.
+    He is the author of three books, more than 150 articles, and more than 70
+    inventions. His research interests include high-pressure and high-density
+    nonthermal plasma discharge processes and applications, microscale plasma
+    discharges, discharges in liquids, spectroscopic diagnostics, plasma
+    propulsion, and innovation plasma applications. He is an Associate Editor of
+    the journal \emph{Earth, Moon, Planets}, and holds two patents.
 
-Dr. Author was a recipient of the International Association of Geomagnetism 
-and Aeronomy Young Scientist Award for Excellence in 2008, and the IEEE 
-Electromagnetic Compatibility Society Best Symposium Paper Award in 2011. 
+    Dr. Author was a recipient of the International Association of Geomagnetism
+    and Aeronomy Young Scientist Award for Excellence in 2008, and the IEEE
+    Electromagnetic Compatibility Society Best Symposium Paper Award in 2011.
 \end{IEEEbiography}
 
-\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a3.png}}]{Third C. Author, Jr.} (M'87) received the B.S. degree in mechanical 
-engineering from National Chung Cheng University, Chiayi, Taiwan, in 2004 
-and the M.S. degree in mechanical engineering from National Tsing Hua 
-University, Hsinchu, Taiwan, in 2006. He is currently pursuing the Ph.D. 
-degree in mechanical engineering at Texas A{\&}M University, College 
-Station, TX, USA.
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{a3.png}}]{Third C. Author, Jr.} (M'87) received the B.S. degree in mechanical
+    engineering from National Chung Cheng University, Chiayi, Taiwan, in 2004
+    and the M.S. degree in mechanical engineering from National Tsing Hua
+    University, Hsinchu, Taiwan, in 2006. He is currently pursuing the Ph.D.
+    degree in mechanical engineering at Texas A{\&}M University, College
+    Station, TX, USA.
 
-From 2008 to 2009, he was a Research Assistant with the Institute of 
-Physics, Academia Sinica, Tapei, Taiwan. His research interest includes the 
-development of surface processing and biological/medical treatment 
-techniques using nonthermal atmospheric pressure plasmas, fundamental study 
-of plasma sources, and fabrication of micro- or nanostructured surfaces. 
+    From 2008 to 2009, he was a Research Assistant with the Institute of
+    Physics, Academia Sinica, Tapei, Taiwan. His research interest includes the
+    development of surface processing and biological/medical treatment
+    techniques using nonthermal atmospheric pressure plasmas, fundamental study
+    of plasma sources, and fabrication of micro- or nanostructured surfaces.
 
-Mr. Author's awards and honors include the Frew Fellowship (Australian 
-Academy of Science), the I. I. Rabi Prize (APS), the European Frequency and 
-Time Forum Award, the Carl Zeiss Research Award, the William F. Meggers 
-Award and the Adolph Lomb Medal (OSA).
+    Mr. Author's awards and honors include the Frew Fellowship (Australian
+    Academy of Science), the I. I. Rabi Prize (APS), the European Frequency and
+    Time Forum Award, the Carl Zeiss Research Award, the William F. Meggers
+    Award and the Adolph Lomb Medal (OSA).
 \end{IEEEbiography}
 
 \end{document}
