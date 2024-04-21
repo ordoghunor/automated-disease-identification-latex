@@ -4,4 +4,5 @@
 \beamer@sectionintoc {3}{Materials and Methods}{8}{0}{3}
 \beamer@sectionintoc {4}{Results and Discussion}{16}{0}{4}
 \beamer@sectionintoc {5}{Conclusion}{19}{0}{5}
-\beamer@sectionintoc {6}{References}{21}{0}{6}
+\beamer@sectionintoc {6}{Questions}{21}{0}{6}
+\beamer@sectionintoc {7}{References}{23}{0}{7}

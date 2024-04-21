@@ -74,53 +74,77 @@
 \section[Introduction]{Introduction}
 
 \begin{frame}{Introduction}
-
-\begin{itemize}
-\vfill
-\item Traditional methods have limitations like time constraints and subjective interpretation
-\vfill
-\item We introduced an AI-driven approach to revolutionize dental diagnostics, leveraging image recognition
-\vfill
-\item The proposed algorithm analyzes X-ray images accurately, identifying various dental conditions including subtle deviations
-\vfill
-\item Beyond enhancing accuracy, the AI framework offers consistent analysis, early intervention capabilities, and improved accessibility to dental care, marking a significant advancement in dental practice
-\end{itemize}
+	\begin{itemize}
+		\vfill
+		\item \textbf{Traditional method limitations}:
+		\begin{itemize}
+			\item Involves time constraints
+			\item Prone to subjective interpretation
+		\end{itemize}
+		\vfill
+		\item AI-driven approach
+		\vfill
+		\item \textbf{Algorithm}:
+		\begin{itemize}
+			\item Analyzes X-ray images accurately
+			\item Identifies various dental conditions including subtle deviations
+		\end{itemize}
+		\vfill
+		\item Enhances the accuracy
+		\vfill
+		\item Reduces missed diagnoses
+		\vfill
+		\item Empowers predictive dental care
+	\end{itemize}
 \end{frame}
 
 \section[Related work]{Related work}
 
 \begin{frame}{Related work}
 	\begin{itemize}
-	\vfill
-	\item \textbf{Deep Learning for Periapical Disease}: Endres and Hillen's deep learning algorithm surpassed oral surgeons in detecting periapical lucencies \cite{endres2020development}
-	\vfill
-	\item \textbf{CNNs for Caries Detection}: Lee and Kim demonstrated CNNs' robustness in detecting dental caries, suggesting their utility for early disease detection \cite{lee2018detection}
-	\vfill
-	\item \textbf{Optimizing CNN Architectures}: Chen and Li  refined CNN architectures for better diagnostic accuracy in dental disease detection \cite{chen2021dental}
-	\vfill
-	\item \textbf{Multitask Classification of Dental Disease}: AL-Ghamdi and Ragab's CNN achieved high accuracy in multitask classification of dental disease \cite{al2022detection}
+		\vfill
+		\item \textbf{Deep Learning for Periapical Disease}:A deep learning algorithm outperformed some manual diagnostics\cite{endres2020development}
+		\vfill
+		\item \textbf{CNNs for Caries Detection}: Highlights the potential of CNNs as a valuable tool to assist dental professionals \cite{lee2018detection}
+		\vfill
+		\item \textbf{Optimizing CNN Architectures}:Uses advanced image analysis techniques to improve diagnostic accuracy in dental radiology \cite{chen2021dental}
+		\vfill
+		\item \textbf{Multitask Classification of Dental Disease}: Highlights the importance of using advanced machine learning techniques to automate disease classificasion tasks \cite{al2022detection}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Related work}
 	\begin{itemize}
-	\vfill
-	\item \textbf{Expert Systems for Diagnosis}: Setiabudi and Sugiharti's Android-based expert system provided accurate diagnoses for precise disease identification \cite{setiabudi2017expert}
-	\vfill
-	\item \textbf{Hybrid Approach for Disease Detection}: Parewe and Mahmudy's hybrid approach combining fuzzy logic and evolutionary strategies improved accuracy in dental disease detection \cite{parewe2018dental}
+		\vfill
+		\item \textbf{Expert Systems for Diagnosis}: Highlights the effectiveness of expert systems in providing accurate and reliable diagnoses \cite{setiabudi2017expert}
+		\vfill
+		\item \textbf{Hybrid Approach for Disease Detection}: Combines fuzzy logic and evolutionary strategies to improve accuracy in dental disease detection \cite{parewe2018dental}
 	\end{itemize}
 \end{frame}
 
 \section[Materials and Methods]{Materials and Methods}
 
-\begin{frame}{Datasets}
+\begin{frame}{Dataset}
 	\begin{itemize}
-	\vfill
-	\item A meticulously curated dataset of 10,000 dental X-ray images was obtained from reputable sources
-	\vfill
-	\item The dataset covers a wide spectrum of dental conditions and demographics, partitioned into balanced training and test sets
-	\vfill
-	\item Rigorous preprocessing, including normalization and annotation by dental specialists, ensures data standardization and accuracy
+		\vfill
+		\item \textbf{Dataset Overview}:
+		\begin{itemize}
+			\item 10,000 dental X-ray images
+			\item Reputable sources
+			\item Diseases included: caries, periodontal disease, malocclusions
+			\item Partitioned into training sets(80\%) and test sets(20\%)
+		\end{itemize}
+		\vfill
+		\item \textbf{Preprocessing}:
+		\begin{itemize}
+			\item Standardize the data, optimize its suitability
+			\item Steps:
+			\begin{enumerate}
+				\item Normalization
+				\item Noise reduction
+				\item Contrast enhancement
+			\end{enumerate}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -132,36 +156,53 @@
 
 \begin{frame}{Proposed Methodology}
 	\begin{itemize}
-	\vfill
-	\item \textbf{Utilization of CNNs and Attention Mechanisms}: Leveraging Convolutional Neural Networks (CNNs) and attention mechanisms, our framework unravels subtle disease signatures in dental X-rays efficiently	
-	\vfill 
-	\item \textbf{Data Preprocessing and Feature Extraction}: Image augmentation and preprocessing enhance dataset diversity and quality, followed by feature extraction to capture meaningful information
-	\vfill
-	\item \textbf{Training and Optimization}: Rigorous training and optimization refine diagnostic acumen, ensuring exposure to diverse pathologies and fine-tuning internal parameters for peak performance
+		\vfill
+		\item \textbf{Utilization of CNNs and Attention Mechanisms}: Unravels subtle disease signatures in dental X-rays efficiently	
+		\vfill 
+		\item \textbf{Image augmentation}: Utilizes techniques: rotation, flipping, noise reduction, contrast enhancement
+		\vfill 
+		\item \textbf{Feature Extraction}: Captures meaningful information
+		\vfill
+		\item \textbf{Training and Optimization}:
+		\begin{itemize}
+			\item Refines diagnostic acumen
+			\item Ensures exposure to diverse pathologies
+			\item Fine-tunes internal parameters
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Data Augmentation}
-  \begin{itemize}
-	\vfill
-	\item \textbf{Techniques Employed}: The augmentation pipeline included geometric transformations like scaling, rotation, and translation to simulate real-world acquisition conditions and introduce controlled variations
-	\vfill
-	\item \textbf{Simulated Degradations}:Gaussian blur and Gaussian noise augmentation were applied to mimic potential issues such as motion blur and electronic noise during the image acquisition process
-	\vfill
-	\item \textbf{Enhancing Diversity and Breadth}:Integration of various augmentation techniques expanded dataset breadth and diversity, covering potential inconsistencies encountered in real-world dental X-ray imaging
-	\vfill
-	\item \textbf{Addressing Overfitting}:Learning general features for better generalization
+  	\begin{itemize}
+		\vfill
+		\item \textbf{Augmentation pipeline}: Simulates real-world acquisition conditions(scaling, ratation, translation) and introduces controlled variations
+		\vfill
+		\item \textbf{Simulated Degradations}:
+		\begin{itemize}
+			\item Gaussian blur to mimic potential issues arising from motion blur
+			\item Gaussian noise to simulate the presence of random noice to the pixel intensities
+		\end{itemize}
+		\vfill
+		\item \textbf{Enhancing Diversity and Breadth}: Covers the range of potential inconsistencies encountered in real-world dental X-ray images
+		\vfill
+		\item \textbf{Addressing Overfitting}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Preprocessing of the Image Dataset}
 	\begin{itemize}
 		\vfill
-		\item \textbf{Normalization and Resizing}: Standardize pixel intensities, ensure consistent dimensions
+		\item \textbf{Normalization and Resizing}:
+		\begin{itemize}
+			\item Standardizes pixel intensities
+			\item Ensures consistent dimensions
+		\end{itemize}
 		\vfill
-		\item \textbf{Specialized Encoding}:Handle categorical data (e.g., disease labels)
-		\vfill
-		\item \textbf{Label and One-Hot Encoding}:Translate textual labels into numerical representations
+		\item \textbf{Specialized Encoding}:
+		\begin{itemize}
+			\item Handles categorical data, such as disease labels
+			\item Implements Label and One-Hot Encoding
+		\end{itemize}
 		\vfill
 		\item \textbf{Bridge to Analytics}: Prepares data for feature extraction and disease classification
 	\end{itemize}
@@ -172,11 +213,17 @@
 		\vfill
 		\item \textbf{Transfer Learning Integration}: Utilizes pre-trained CNNs for foundational knowledge
 		\vfill
-		\item \textbf{Convolutional Layers}:Extract hierarchical features from X-ray images and identify complex disease signatures via filters
+		\item \textbf{Convolutional Layers}:Extracts hierarchical features from X-ray images and identify complex disease signatures via filters
 		\vfill
-		\item \textbf{Max-Pooling and Dropout Layers}:Reduce dimensionality while preserving features, enhance efficiency and prevent overfitting
+		\item \textbf{Max-Pooling Layers}:
+		\begin{itemize}
+			\item Reduces dimensionality while preserving features
+			\item Enhances efficiency and prevent overfitting
+		\end{itemize} 
 		\vfill
-		\item \textbf{Activation Functions}: Introduce non-linearity for complex pattern learning
+		\item \textbf{Dropout Layers}: Introduces a controlled element of randomness
+		\vfill
+		\item \textbf{Activation Functions}: Introduces non-linearity for complex pattern learning
 		\vfill
 		\item \textbf{Fully-Connected Layers}: Output layer enables probability-based identification
 	\end{itemize}
@@ -221,12 +268,23 @@
 \begin{frame}{Implications and Future Directions}
 	\begin{itemize}
 		\vfill
-		\item \textbf{Augmenting Diagnostic Capabilities}:Facilitating early detection and intervention, Improving treatment outcomes
+		\item \textbf{Augmenting Diagnostic Capabilities}:
+		\begin{itemize}
+			\item Facilites early detection and intervention
+			\item Improves treatment outcomes
+		\end{itemize} 
 		\vfill
-		\item \textbf{Revolutionizing Dental Diagnostics}: Leveraging deep learning and diverse dataset, Potential for more effective patient care
+		\item \textbf{Revolutionizing Dental Diagnostics}: 
+		\begin{itemize}
+			\item Leverages deep learning and diverse dataset
+			\item Potential for more effective patient care
+		\end{itemize} 
 		\vfill
-		\item \textbf{Opportunities for Improvement}:Dataset Expansion: Include broader clinical scenarios and demographics, Advances in Deep Learning: Optimize methodology for better performance
-		
+		\item \textbf{Opportunities for Improvement}:
+		\begin{itemize}
+			\item Dataset Expansion: Includes broader clinical scenarios and demographics
+			\item Advances in Deep Learning: Optimizes methodology for better performance
+		\end{itemize} 
 	\end{itemize}
 \end{frame}
 
@@ -234,16 +292,19 @@
 \begin{frame}{Conclusion}
 	\begin{itemize}
 		\vfill
-		\item \textbf{Significance}:Represents a significant leap in AI integration into dental practice
+		\item \textbf{Significance}: Represents a significant leap in AI integration into dental practice
 		\vfill
-		\item AI-driven dentistry shaping the future of oral healthcare
+		\item Enables dentists to deliver more efficient, accurate and preventative dental care
 		\vfill
-		\item Transforming diagnosis and management of oral health
-		
+		\item Exceptional accuracy in identifying a wide range of dental conditions
 	\end{itemize}
 \end{frame}
-\section{References}
 
+\section[Questions]{Questions}
+\begin{frame}{Questions}
+\end{frame}
+
+\section{References}
 \begin{frame}[allowframebreaks]{References}
 	\nocite{*}
     \bibliographystyle{unsrt}
