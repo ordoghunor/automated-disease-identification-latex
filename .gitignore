@@ -7,3 +7,4 @@
 *.synctex.gz
 *.bbl
 *.blg
+!palyazat_bemutato/fig/*.pdf

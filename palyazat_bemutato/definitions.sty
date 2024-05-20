@@ -1,0 +1,176 @@
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times,euler}
+% \usepackage[scaled=0.85]{luximono} % 
+\renewcommand\ttdefault{ul9}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{xcolor,relsize}
+
+% TIKZ and PGF
+\usepackage{pgf,tikz}
+\usetikzlibrary{shapes,patterns,plotmarks,calc,positioning}
+%
+\colorlet{barna_t}{red!40!black}
+\colorlet{vbarna_t}{white!60!barna_t}
+\colorlet{vbarna}{yellow!30!vbarna_t}
+\colorlet{barna}{yellow!20!barna_t}
+\tikzset{every node/.style={draw}}
+\tikzset{nyil/.style={->,blue,line width=1.5pt}}
+
+\newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{L}{>{$}l<{$}}
+\newcolumntype{R}{>{$}r<{$}}
+
+\def\defeq{\mathrel {\lower 1pt\hbox{\smash{$\buildrel \hbox{{\tiny\textup{def}}}\over =$}}}}
+
+% italic abbreviations
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\etc}{{\it etc. }}
+\newcommand{\XOR}{{\mathrm X\!O\!R}}
+\newcommand{\negg}[1]{{{\overline #1}}}
+\newcommand{\Norm}{{\ensuremath{{\cal N}}}}
+\newcommand{\NS}{\negthickspace}
+
+\newcommand{\balpha}{\vc{\alpha}}
+\newcommand{\bsigma}{\vc{\sigma}}
+\newcommand{\btheta}{\vc{\theta}}
+\newcommand{\bTheta}{\vc{\Theta}}
+\newcommand{\bA}{\vc{A}}
+\newcommand{\ba}{\vc{a}}
+\newcommand{\uba}{\underline{\ba}}
+\newcommand{\bb}{\vc{b}}
+\newcommand{\bB}{\vc{B}}
+\newcommand{\bc}{\vc{c}}
+\newcommand{\bC}{\vc{C}}
+\newcommand{\bchi}{\vc{\chi}}
+\newcommand{\bd}{\vc{d}}
+\newcommand{\bD}{\vc{D}}
+\newcommand{\be}{\vc{e}}
+\newcommand{\bF}{\vc{F}}
+\newcommand{\bbf}{\vc{f}}
+\newcommand{\ubf}{\underline{\bbf}}
+\newcommand{\bg}{\vc{g}}
+\newcommand{\bG}{\vc{G}}
+\newcommand{\bh}{\vc{h}}
+\newcommand{\bI}{\vc{I}}
+\newcommand{\bJ}{\vc{J}}
+\newcommand{\bK}{\vc{K}}
+\newcommand{\bk}{\vc{k}}
+\newcommand{\bm}{\vc{m}}
+\newcommand{\bLambda}{\vc{\Lambda}}
+\newcommand{\bM}{\vc{M}}
+\newcommand{\bmu}{\vc{\mu}}
+\newcommand{\bomega}{\vc{\omega}}
+\newcommand{\bOmega}{\vc{\Omega}}
+\newcommand{\bp}{\vc{p}}
+\newcommand{\bP}{\vc{P}}
+\newcommand{\bPhi}{\vc{\Phi}}
+\newcommand{\uPhi}{\underline{\bPhi}}
+\newcommand{\bq}{\vc{q}}
+\newcommand{\bQ}{\vc{Q}}
+\newcommand{\br}{\vc{r}}
+\newcommand{\bR}{\vc{R}}
+\newcommand{\bs}{\vc{s}}
+\newcommand{\ubs}{\underline{\vc{s}}}
+\newcommand{\bS}{\vc{S}}
+\newcommand{\bSigma}{\vc{\Sigma}}
+\newcommand{\bt}{\vc{t}}
+\newcommand{\bu}{\vc{u}}
+\newcommand{\bU}{\vc{U}}
+\newcommand{\bv}{\vc{v}}
+\newcommand{\bV}{\vc{V}}
+\newcommand{\bw}{\vc{w}}
+\newcommand{\bW}{\vc{W}}
+\newcommand{\bx}{\vc{x}}
+\newcommand{\bX}{\vc{X}}
+\newcommand{\ubX}{\underline{\bX}}
+\newcommand{\bxi}{\vc{\xi}}
+\newcommand{\by}{\vc{y}}
+\newcommand{\uby}{\underline{\by}}
+\newcommand{\bZ}{\vc{Z}}
+\newcommand{\bz}{\vc{z}}
+\newcommand{\ubz}{\underline{\bz}}
+\newcommand{\bzero}{\vc{0}}
+\newcommand{\params}[1]{\btheta_{#1},C_{#1}}
+%\newcommand{\Qed}{{\raggedleft\hfill$\Box$}}
+
+% first line is used where there are NO bold fonts to use in MATH
+\newcommand{\vc}[1]{{\pmb{#1}}}
+%\newcommand{\vc}[1]{{\boldsymbol { #1 } }}
+
+\def\abs{\ensuremath{\mathop{\operator@font abs}}}
+\def\argmin{\ensuremath{\mathop{\operator@font argmin}\limits}}
+\def\argmax{\ensuremath{\mathop{\operator@font argmax}\limits}}
+\newcommand{\BV}{\ensuremath{{\cal BV}} }
+\newcommand{\Cov}{\ensuremath{\mathrm{\Sigma}}}
+\def\diag{\mathop{\operator@font diag}\limits}
+\newcommand{\D}{{\ensuremath{{\cal{D}}}{}}{}}
+\newcommand{\Dir}{\ensuremath{\mathrm{Dir}}}
+\newcommand{\erf}{\ensuremath{\mathrm{erf}}}
+\newcommand{\Erf}{\ensuremath{\mathrm{Erf}}}
+\newcommand{\expec}{\ensuremath{\mathrm{E}}}
+\newcommand{\F}{{\ensuremath{\pmb{\cal F}} }}
+\newcommand{\Ga}{\ensuremath{\mathrm{Ga}}}
+\newcommand{\GP}{{\ensuremath{{\cal GP}} {}}{}}
+\newcommand{\KL}{{\ensuremath{\mathrm{KL}}}}
+\newcommand{\logit}{\ensuremath{\mathrm{logit}}}
+\newcommand{\M}{{\ensuremath{{\cal{M}}}{}}{}}
+\newcommand{\mse}{\ensuremath{\mathrm{mse}}}
+\newcommand{\N}{\ensuremath{\mathrm{N}}}
+\newcommand{\new}{\ensuremath{\mathrm{new}}}
+\renewcommand{\neg}{\overline}
+\newcommand{\Ng}{\ensuremath{\mathrm{Ng}}}
+\newcommand{\Proj}{\ensuremath{\mathrm{Proj}}}
+\newcommand{\rand}{\ensuremath{\mathrm{rand}}}
+\newcommand{\post}{\ensuremath{\mathrm{post}}}
+\newcommand{\probit}{\ensuremath{\mathrm{probit}}}
+\newcommand{\Score}{\ensuremath{\mathrm{\varepsilon}} }
+\newcommand{\sgn}{\ensuremath{\mathrm{sgn}}}
+\newcommand{\sign}{\ensuremath{\mathrm{sign}}}
+\newcommand{\sinc}{\ensuremath{\mathrm{sinc}}}
+\newcommand{\test}{\ensuremath{\mathrm{test}}}
+\newcommand{\tr}{\ensuremath{\mathrm{tr}}}
+\newcommand{\Tr}{\ensuremath{\mathrm{Tr}}}
+\newcommand{\X}{{\ensuremath{{\cal{X}}}{}}{}}
+
+%  Alternative, but not recognised by latex2html
+%% \DeclareMathOperator{\sign}{sign}
+\newcommand{\mean}[1]{\left\langle#1\right\rangle}
+\newcommand{\scalH}{\cdot_{{\cal H}}}
+
+
+\newcommand*{\partder}[2]{\ensuremath \frac{\partial #1}{\partial #2}}
+\newcommand*{\loglik}{\ln \langle P(\vc{y}_{t+1}|\hat{\vc{w}} +\Delta\vc{w}) \rangle_{\Delta\vc{w}}}
+
+\newcommand*{\erfDef}{\ensuremath 
+  \erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x dx \; \exp(-t^2)}
+
+%%%%%%%%% COLOR STUFF %%%%%%%%%%%%
+\definecolor{al_white} {rgb}{0.45, 0.45, 0.75}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+\newcommand{\brown}[1]{\textcolor{brown}{#1}}
+\newcommand{\cyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\magenta}[1]{\textcolor{magenta}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+
+%%%% CATCODES to transform ...
+%\catcode`\Õ=\active \defÕ{\H O}
+%\catcode`\õ=\active \defõ{\H o}
+%\catcode`\Û=\active \defÛ{\H U}
+%\catcode`\û=\active \defû{\H u}
+
+% hyphenation
+\begingroup
+% Make `=' to be seen as an explicit hyphen inside \hyphenation:
+\lccode`\==`\-
+
+%      % Example: Declare hyphenation points of `government-founded':
+%      \hyphenation{gov-ern-ment=-foun-ded}
+

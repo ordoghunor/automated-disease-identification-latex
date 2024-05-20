@@ -1,0 +1,8 @@
+\babel@toc {british}{}\relax 
+\beamer@sectionintoc {1}{Problem Statement}{3}{0}{1}
+\beamer@sectionintoc {2}{Approach}{4}{0}{2}
+\beamer@sectionintoc {3}{Expected Outcomes}{5}{0}{3}
+\beamer@sectionintoc {4}{Impact}{6}{0}{4}
+\beamer@sectionintoc {5}{Consortium Description}{7}{0}{5}
+\beamer@sectionintoc {6}{Work Package List}{8}{0}{6}
+\beamer@sectionintoc {7}{Bibliography}{11}{0}{7}
